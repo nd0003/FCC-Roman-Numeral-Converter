@@ -1,0 +1,64 @@
+<!-- 
+This is the HTML code which includes instructions on how to use the JS converter.
+You may use these instructions however you want to as long as I am credited. 
+-->
+
+<html lang="en-GB">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+  <script>
+    //variables
+    function convertToRoman(number) {
+      var rom = [
+        ["M", 1000],
+        ["CM", 900],
+        ["D", 500],
+        ["CD", 400],
+        ["C", 100],
+        ["XC", 90],
+        ["L", 50],
+        ["XL", 40],
+        ["X", 10],
+        ["IX", 9],
+        ["V", 5],
+        ["IV", 4],
+        ["I", 1]
+      ];
+      var blank = [];
+      //converter
+      rom.forEach(function(p) {
+        while (number >= p[1]) {
+          blank.push(p[0]);
+          number -= p[1];
+        }
+      });
+      return blank.join("");
+    }
+  </script>
+  <title>FCC JS Roman Numeral Converter</title>
+</head>
+
+<body>
+  <header>
+    <h1>nd03's Decimal to Roman Numeral Converter
+  </header>
+  <p>This is my Roman Numeral Converter that I wrote in JavaScript for <a href="https://www.freecodecamp.org/learn/" target="_blank">freeCodeCamp.org</a>. You can use the converter by doing the following:
+    <br>
+  <ul>
+    <li>1. Press F12 on your keyboard. This will bring up the devtools for your browser. You can also open devtools by right clicking anywhere on the page, then clicking "Inspect."</li>
+    <li>2. At the top of the devtools, you will see a navigation bar. Click on "console" to bring up the JavaScript console.</li>
+    <li>3. Once you are in the console, you can use the following function to convert a number of your choice into the Roman numeral form:
+      <br>
+      convertToRoman(number)
+      <br>
+      (You put the number of your choice in the brackets.)
+      <br>
+      Doing this will convert any decimal number into its Roman numeral form!
+  </ul>
+</body>
+
+</html>
