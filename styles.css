@@ -1,0 +1,19 @@
+/* This is the CSS code for the instructions. Please open index.html and read the comment at the top if you don't understand. */
+
+html {
+  background-color: rgb(20, 27, 36);
+}
+
+a {
+  color: rgb(255, 252, 196);
+}
+
+body {
+  color: white;
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
